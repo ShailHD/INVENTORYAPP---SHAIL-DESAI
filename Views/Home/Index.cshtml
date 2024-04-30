@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to InventoryApp</h1>
+    <p>Manage your inventory efficiently and effectively.</p>
+    <hr />
+    <p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Products")" role="button">Manage Products</a>
+        <a class="btn btn-secondary btn-lg" href="@Url.Action("Index", "Suppliers")" role="button">Manage Suppliers</a>
+    </p>
+</div>
+
+@section Scripts {
+    <!-- Optional JavaScript -->
+    <!-- You can also include any other scripts here that are specific to the home page -->
+}

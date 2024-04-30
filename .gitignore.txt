@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.suo
+*.dll
+*.exe
+*.pdb
+*.cache
+*.vs/
+*.nupkg
+appsettings.json
+appsettings.Development.json

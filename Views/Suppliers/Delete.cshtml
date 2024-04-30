@@ -1,0 +1,28 @@
+@model InventoryApp.Models.Supplier
+
+@{
+    ViewData["Title"] = "Delete Supplier";
+}
+
+<h1>Delete Supplier</h1>
+
+<h3>Are you sure you want to delete this supplier?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.CompanyName)</dt>
+        <dd>@Html.DisplayFor(model => model.CompanyName)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.ContactName)</dt>
+        <dd>@Html.DisplayFor(model => model.ContactName)</dd>
+
+        <!-- Add additional details here as needed -->
+        
+        <!-- ... -->
+    </dl>
+    
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="SupplierId" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

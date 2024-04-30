@@ -1,0 +1,39 @@
+@model IEnumerable<InventoryApp.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Suppliers List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Supplier</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CompanyName)</th>
+            <th>@Html.DisplayNameFor(model => model.ContactName)</th>
+            <th>@Html.DisplayNameFor(model => model.ContactTitle)</th>
+            <th>@Html.DisplayNameFor(model => model.Phone)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var supplier in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => supplier.CompanyName)</td>
+            <td>@Html.DisplayFor(modelItem => supplier.ContactName)</td>
+            <td>@Html.DisplayFor(modelItem => supplier.ContactTitle)</td>
+            <td>@Html.DisplayFor(modelItem => supplier.Phone)</td>
+            <td>@Html.DisplayFor(modelItem => supplier.City)</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@supplier.SupplierId" class="btn btn-default">Edit</a>
+                <a asp-action="Details" asp-route-id="@supplier.SupplierId" class="btn btn-default">Details</a>
+                <a asp-action="Delete" asp-route-id="@supplier.SupplierId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
